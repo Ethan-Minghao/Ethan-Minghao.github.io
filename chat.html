@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Jasmine - Your Web3 AI Agent</title>
+    <link rel="stylesheet" href="chat-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-left">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="agent-info">
+                    <div class="agent-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="agent-details">
+                        <h3>Jasmine</h3>
+                        <span class="agent-status">
+                            <div class="status-dot"></div>
+                            Web3 AI Agent
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="clear-chat" title="Clear conversation">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="welcome-message">
+                <div class="agent-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <h4>Welcome! I'm Jasmine, your Web3 AI companion</h4>
+                    <p>I can help you understand blockchain technology, DeFi protocols, NFTs, cryptocurrency, and navigate the decentralized web. What would you like to learn about today?</p>
+                    <div class="suggested-questions">
+                        <button class="suggestion-btn" data-question="What is DeFi and how does it work?">
+                            What is DeFi and how does it work?
+                        </button>
+                        <button class="suggestion-btn" data-question="How do I start investing in cryptocurrency?">
+                            How do I start investing in cryptocurrency?
+                        </button>
+                        <button class="suggestion-btn" data-question="Explain smart contracts in simple terms">
+                            Explain smart contracts in simple terms
+                        </button>
+                        <button class="suggestion-btn" data-question="What are NFTs and why are they valuable?">
+                            What are NFTs and why are they valuable?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="agent-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <textarea
+                    id="messageInput"
+                    placeholder="Ask me anything about Web3, DeFi, NFTs, or cryptocurrency..."
+                    rows="1"
+                ></textarea>
+                <button id="sendButton" class="send-btn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <small>Jasmine can make mistakes. Verify important information.</small>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat-script.js"></script>
+</body>
+</html>
